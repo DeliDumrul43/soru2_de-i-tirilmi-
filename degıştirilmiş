@@ -1,0 +1,64 @@
+def tersyaz(a):
+    print(a[::-1],"tersten")
+
+
+a = input("lütfen yazı yazın : ")
+tersyaz(a)
+
+print("kelime kelime bölen")
+
+def bolen(b):
+    b_bolen = b.split()
+    print(b_bolen)
+
+b = input("lütfen yazı yazın : ")
+bolen(b)
+
+def nekadar(text):
+    for i in text:
+        if not i in kaf:
+            kaf.append(i)
+            say.append(1)
+        else:
+            say[kaf.index(i)] = say[kaf.index(i)]+1
+    print("ne kadar harf var ?")
+    for j in range(len(kaf)):
+        print(kaf[j], "-", say[j])
+
+text = input("Lütfen yazı yazın : ")
+kaf = []
+say = []
+
+nekadar(text)
+
+print("split ters")
+def ters_duz(a):
+    a_bolen = a.split()
+    for i in range(len(a_bolen)):
+        san = a_bolen[i]
+        san1 = san[::-1]
+        print(san1)
+a = input("lütfen yazı yazınız :")
+ters_duz(a)
+
+
+ünlü_al = input("lütfen yazı yazın : ")
+ünlü = ["a, ı, o, u ,e, i ,ö, ü"]
+ünsüz = ["ç, f, h, k, p, s, ş, t, b, c, d, g, ğ, j, l, m, n, r, v, y, z"]
+ünlü_sayısı = []
+ünsüz_sayısı = []
+
+def unlu_unsuz():
+  for i in ünlü_al:
+    print(*ünlü_al)
+    hak = ünlü_al
+
+    if ünlü_al == ünlü:
+        print("ünlüler",hak)
+        ünlü_sayısı.append(hak)
+    elif ünlü_al == ünsüz:
+        print("ünsüz",ünlü_al)
+        ünsüz_sayısı.append(ünlü_al)
+    break
+print(ünlü_sayısı)
+print(ünsüz_sayısı)
